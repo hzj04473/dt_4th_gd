@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .div_table {
+        margin-top: 10px;
+      }
+      table {
+        width: 500px;
+        border: 0;
+      }
+
+      caption {
+        display: none;
+      }
+
+      th {
+        border: 1px #efefef solid;
+      }
+
+      td {
+        text-align: center;
+        border: 1px #efefef solid;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div_table">
+      <table>
+        <caption>
+          실습1
+        </caption>
+        <colgroup>
+          <col width="166.6" />
+          <col width="166.6" />
+          <col width="166.6" />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td colspan="2">1</td>
+            <td rowspan="2">2</td>
+          </tr>
+          <tr>
+            <td rowspan="2">3</td>
+            <td>center</td>
+          </tr>
+          <tr>
+            <td colspan="2">4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="div_table">
+      <table>
+        <caption>
+          실습 2
+        </caption>
+        <colgroup>
+          <col width="100" />
+          <col width="200" />
+          <col width="100" />
+          <col width="100" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>음료</th>
+            <th>가격</th>
+            <th>이미지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">커피류</td>
+            <td>아메리카노</td>
+            <td>4,200원</td>
+            <td>
+              <img
+                src="https://image.istarbucks.co.kr/upload/store/skuimg/2024/10/[9200000005616]_20241014134021881.jpg"
+                alt="아메리카노"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>돌체라떼</td>
+            <td>4,800원</td>
+            <td>
+              <img
+                src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002487]_20210426091745467.jpg"
+                alt="돌체라떼"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="2">주스류</td>
+            <td>자바칩 프라푸치오</td>
+            <td rowspan="2">5,000원</td>
+            <td>
+              <img
+                src="https://image.istarbucks.co.kr/upload/store/skuimg/2024/05/[9200000005282]_20240509131200017.jpg"
+                alt="자바칩 프라푸치오"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>녹차 프라푸치노</td>
+
+            <td>
+              <img
+                src="https://image.istarbucks.co.kr/upload/store/skuimg/2023/08/[9200000004750]_20230801101408624.jpg"
+                alt="녹차 프라푸치노"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
