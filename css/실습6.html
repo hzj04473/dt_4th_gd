@@ -9,12 +9,22 @@
     [disabled] {
       background-color: red;
     }
+
+    [disabled]::placeholder {
+      color: yellow;
+    }
+
     [placeholder='이름'] {
       background-color: orange;
     }
 
+    [placeholder='이름']::placeholder {
+      color: blue;
+    }
+
     [value] {
       background-color: blueviolet;
+      color: #fff;
     }
   </style>
   <body>
