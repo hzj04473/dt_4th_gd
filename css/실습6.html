@@ -22,10 +22,25 @@
       color: blue;
     }
 
-    [value] {
+    /* [value] {
+      background-color: blueviolet;
+      color: #fff;
+    } */
+
+    body *:not([placeholder]) {
       background-color: blueviolet;
       color: #fff;
     }
+
+    /* 
+    body *:nth-child(2) {
+      background-color: blueviolet;
+      color: #fff;
+    }
+    body *:nth-child(3) {
+      background-color: blueviolet;
+      color: #fff;
+    } */
   </style>
   <body>
     <input type="text" placeholder="이름" />
