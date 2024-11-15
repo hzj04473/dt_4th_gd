@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 400px;
+      }
+
+      h3:hover {
+        background-color: black;
+        color: #fff;
+        width: 400px;
+      }
+      /* hover */
+      /* focus */
+      textarea {
+        width: 400px;
+        height: 200px;
+      }
+      textarea:focus {
+        background-color: #f96666;
+      }
+      /* checked */
+      /* active */
+      button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color: white;
+        font-size: 17px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      #redChk:checked + label {
+        background-color: red;
+      }
+
+      #blueChk:checked + label {
+        background-color: blue;
+      }
+
+      #yellowChk:checked + label {
+        background-color: yellow;
+      }
+
+      button:active {
+        background-color: gray;
+        color: #f96666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>건의 사항을 적어주세요!</h3>
+    <form>
+      <!-- label
+  - 명시적 방식: id와 for 맞춰주기
+  - 암시적 방식: label 내부에 input 쓰기
+  - checkbox 진행 시 명시적 방식으로 진행하기
+  -->
+      <div><textarea name="" id="" placeholder="건의사항 🎈"></textarea></div>
+      <input type="checkbox" id="redChk" /><label for="redChk">빨강</label>
+      <input type="checkbox" id="blueChk" /><label for="blueChk">파랑</label>
+      <input type="checkbox" id="yellowChk" /><label for="yellowChk"
+        >노랑</label
+      >
+      <button>제출</button>
+    </form>
+  </body>
+</html>
