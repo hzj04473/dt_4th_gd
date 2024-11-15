@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .strips div:nth-child(2n + 1) {
+      .strips div:nth-child(n + 1) {
         background-color: navy;
         width: 200px;
         height: 30px;
+        color: #fff;
       }
 
-      .strips div:nth-child(2n) {
+      .strips div:nth-child(4n + 2) {
         background-color: yellow;
         width: 200px;
         height: 30px;
+        color: #000;
       }
     </style>
   </head>
   <body>
     <div class="strips">
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-      <div>yellow</div>
-      <div>navy</div>
-      <div>yellow</div>
+      <div>1. navy</div>
+      <div>2. yellow</div>
+      <div>3. navy</div>
+      <div>4. navy</div>
+      <div>5. navy</div>
+      <div>6. yellow</div>
+      <div>7. navy</div>
+      <div>8. navy</div>
+      <div>9. navy</div>
+      <div>10. yellow</div>
+      <div>11. navy</div>
     </div>
   </body>
 </html>
