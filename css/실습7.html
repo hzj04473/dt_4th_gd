@@ -51,6 +51,107 @@
         background-color: gray;
         color: #f96666;
       }
+
+      /* 기본 체크박스 숨기기 */
+      .container {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .container input[type='checkbox'] {
+        display: none;
+      }
+
+      /* label 스타일 설정 */
+      .container #check1 + label {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: #fff; /* 기본 색상 */
+        border: 1px #000 solid;
+      }
+      .container #check1:checked + label {
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 10px;
+      }
+
+      .container #check1:checked + label::after {
+        content: '✔';
+      }
+
+      .container #check2 + label {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 10px;
+        background-color: #fff; /* 기본 색상 */
+        cursor: pointer;
+        border: 1px #000 solid;
+        transition: background-color 0.3s;
+      }
+
+      .container #check2:checked + label {
+        background-color: yellow;
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 24px;
+      }
+
+      .container #check2:checked + label::after {
+        content: '🤡';
+      }
+
+      .container #check3 + label {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 50%; /* 원형으로 만들기 */
+        background-color: #fff; /* 기본 색상 */
+        cursor: pointer;
+        border: 1px #000 solid;
+        transition: background-color 0.3s;
+      }
+
+      .container #check3:checked + label {
+        background-color: orange;
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .container #check3:checked + label::after {
+        content: '👺';
+      }
+
+      .container #check4 + label {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 12%; /* 원형으로 만들기 */
+        background-color: #fff; /* 기본 색상 */
+        cursor: pointer;
+        border: 1px #000 solid;
+        transition: background-color 0.3s;
+      }
+
+      .container #check4:checked + label {
+        background-color: red;
+        font-size: 1.2em;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      .container #check4:checked + label::after {
+        content: '👹';
+      }
     </style>
   </head>
 
@@ -68,5 +169,16 @@
       <input type="checkbox" id="yelowChk" /><label for="yelowChk">노랑</label>
       <button>제출</button>
     </form>
+
+    <div class="container">
+      <input type="checkbox" id="check1" />
+      <label for="check1"></label>
+      <input type="checkbox" id="check2" />
+      <label for="check2"></label>
+      <input type="checkbox" id="check3" />
+      <label for="check3"></label>
+      <input type="checkbox" id="check4" />
+      <label for="check4"></label>
+    </div>
   </body>
 </html>
