@@ -98,3 +98,18 @@ input:focus {
   content: '빨리';
   color: green;
 }
+
+/* 속성 선택자 */
+[disabled] {
+  color: red;
+  background-color: aquamarine;
+}
+
+[type='password'] {
+  background-color: lightcoral;
+  color: blue;
+}
+
+[placeholder] {
+  background-color: #000;
+}
