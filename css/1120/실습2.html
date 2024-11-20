@@ -6,24 +6,23 @@
     <title>Document</title>
     <style>
       :root {
-        --box_width: 100vw;
-        --box-height: 100vw;
-      }
-      * {
-        margin: 0;
-        padding: 0;
+        --box_width: 800px;
+        --box-height: 800px;
+        --box-color-blue: blue;
+        --box-color-antiquewhite: antiquewhite;
+        --box-align-center: center;
       }
 
       .box {
         width: var(--box_width);
         height: var(--box-height);
-        background-color: antiquewhite;
+        background-color: var(--box-color-antiquewhite);
       }
       .subBox {
         width: calc(var(--box_width) / 10);
         height: calc(var(--box-height) / 10);
-        background-color: blue;
-        text-align: center;
+        background-color: var(--box-color-blue);
+        text-align: var(--box-align-center);
         line-height: calc(var(--box-height) / 10);
       }
     </style>
