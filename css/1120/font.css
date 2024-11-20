@@ -1,0 +1,21 @@
+/* 2. 눈누 폰트 적용 */
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'yg-jalnan';
+  font-optical-sizing: auto;
+  font-weight: 100;
+}
+
+div {
+  /* 1. 구글 폰트 적용 */
+  font-family: 'Doto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+}
