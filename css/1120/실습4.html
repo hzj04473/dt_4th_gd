@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    :root {
+      --box-width: 200px;
+      --box-height: 200px;
+      --box-line-1px: 1px;
+      --box-line-2px: 2px;
+      --box-line-3px: 3px;
+      --box-line-4px: 4px;
+      --box-line-style1: solid;
+      --box-line-style2: dotted;
+      --box-line-style3: dashed;
+      --box-line-style4: none;
+      --box-color-red: red;
+      --box-color-yellow: yellow;
+      --box-color-green: green;
+      --box-color-blue: blue;
+      --box-radius-10: 10%;
+      --box-radius-20: 20%;
+      --box-radius-30: 30%;
+      --box-radius-50: 50%;
+      --box-margin: 10px;
+    }
+    .box {
+      width: var(--box-width);
+      height: var(--box-height);
+      margin-bottom: var(--box-margin);
+    }
+
+    .box1 {
+      border-top: var(--box-line-1px) solid #ccc;
+      border-bottom: var(--box-line-2px) solid #ccc;
+      border-left: var(--box-line-3px) solid #ccc;
+      border-right: var(--box-line-4px) solid #ccc;
+      border-radius: var(--box-radius-10);
+    }
+    .box2 {
+      border-top: var(--box-line-1px) var(--box-line-style1) #ccc;
+      border-bottom: var(--box-line-1px) var(--box-line-style2) #ccc;
+      border-left: var(--box-line-1px) var(--box-line-style3) #ccc;
+      border-right: var(--box-line-1px) var(--box-line-style4) #ccc;
+      border-radius: var(--box-radius-20);
+    }
+    .box3 {
+      border-top: var(--box-line-1px) var(--box-line-style1)
+        var(--box-color-red);
+      border-bottom: var(--box-line-1px) var(--box-line-style1)
+        var(--box-color-yellow);
+      border-left: var(--box-line-1px) var(--box-line-style1)
+        var(--box-color-green);
+      border-right: var(--box-line-1px) var(--box-line-style1)
+        var(--box-color-blue);
+      border-radius: var(--box-radius-30);
+    }
+    .box4 {
+      border: var(--box-line-1px) var(--box-line-style3) var(--box-color-red);
+      border-radius: var(--box-radius-50);
+    }
+  </style>
+  <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+  </body>
+</html>
