@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        height: 200vh;
+      }
+      /* • 크기 500px, 500px 의 컨테이너 div 생성. */
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+        position: relative;
+      }
+      /* • 크기 100px, 100px 의 Item div 3개 생성. */
+      .item {
+        width: 100px;
+        height: 100px;
+      }
+      .item:nth-child(1) {
+        background-color: lightcoral;
+        position: relative;
+        left: 50px;
+        top: 30px;
+      }
+      /* • Item 2 는 컨테이너를 기준으로 오른쪽 30px, 아래쪽 100px 에 위치 */
+      .item:nth-child(2) {
+        background-color: blue;
+        position: absolute;
+        right: 30px;
+        bottom: 100px;
+      }
+      /* • item 3 는 뷰포트를 기준으로 오른쪽 100px, 위 100px 에 위치 시키기 */
+      .item:nth-child(3) {
+        background-color: blueviolet;
+        position: fixed;
+        top: 100px;
+        right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1"></div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+    </div>
+  </body>
+</html>
