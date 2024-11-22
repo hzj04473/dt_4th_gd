@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* • 500px 500pxcontainer div 선언 */
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: bisque;
+        position: relative;
+      }
+      /* • 컨테이너 안에 100px 100px아이템1, 2, 3 div 선언 */
+      .item {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      .item:nth-child(1) {
+        background-color: lightcoral;
+      }
+
+      /* • 아이템 2는 top, left 30px */
+      .item:nth-child(2) {
+        background-color: blue;
+        top: 30px;
+        left: 30px;
+      }
+      /* • 아이템 3은 top, left 60px */
+      .item:nth-child(3) {
+        background-color: blueviolet;
+        top: 60px;
+        left: 60px;
+      }
+
+      /* • 아이템 3, 2, 1 순서대로 보이도록 설정 */
+      .item:nth-child(1) {
+        z-index: 1;
+      }
+
+      .item:nth-child(2) {
+        z-index: 2;
+      }
+
+      .item:nth-child(3) {
+        z-index: 3;
+      }
+      /* • 아이템 1, 3, 2 순서대로 보이도록 설정 */
+      .item:nth-child(1) {
+        z-index: 3;
+      }
+
+      .item:nth-child(2) {
+        z-index: 2;
+      }
+
+      .item:nth-child(3) {
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">아이템1</div>
+      <div class="item item2">아이템2</div>
+      <div class="item item3">아이템3</div>
+    </div>
+  </body>
+</html>
