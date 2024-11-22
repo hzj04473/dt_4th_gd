@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.fl1-1 {
+  background-color: aqua;
+  margin: 2px;
+}
+
+.flex2 {
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex2-1 {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+}
+
+.flex2-2 {
+  background-color: aqua;
+}
+
+.flex3 {
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
