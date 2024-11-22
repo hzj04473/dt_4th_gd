@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습1</title>
+    <style>
+      div {
+        width: 800px;
+        height: 500px;
+        margin-bottom: 20px;
+      }
+
+      div:nth-child(1) {
+        background-color: blue;
+        background-image: url(./image/Owl_image.png);
+        background-repeat: repeat-x;
+        background-position: center;
+      }
+      div:nth-child(2) {
+        background-color: yellow;
+        background-image: url(./image/Owl_image.png);
+        background-position: 100px 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      div:nth-child(3) {
+        background-color: red;
+        background-image: url(./image/Owl_image.png);
+        background-position: 100px 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1번 div 배경 이미지크기 그대로 수직 중앙에 배치, x 축으로만 반복하도록 설정 -->
+    <div></div>
+    <!-- 2번 div 배경 이미지의 크기를 짧은 축에 맞추고, 왼쪽에서 100px 위에서 30px 떨어지도록 설정, 반복 없음. -->
+    <div></div>
+    <!-- 3번 div 배경 이미지의 크기를 긴 축에 맞추고, 포지션 값 조정해 보기(자유롭게), 반복 없음. -->
+    <div></div>
+  </body>
+</html>
