@@ -16,6 +16,7 @@
         border-radius: 20px;
         position: relative;
         z-index: 999;
+        overflow: hidden; /* 부모 경계를 넘지 않도록 제한 */
       }
 
       .coral {
@@ -24,7 +25,7 @@
         background: coral;
         position: absolute;
         z-index: 1;
-        border-radius: 18px 0 0 0;
+        /* border-radius: 18px 0 0 0; */
       }
       .orange {
         width: 200px;
@@ -33,7 +34,7 @@
         position: absolute;
         left: 200px;
         z-index: 1;
-        border-radius: 0 18px 0 0;
+        /* border-radius: 0 18px 0 0; */
       }
 
       .yellow {
@@ -43,7 +44,7 @@
         position: absolute;
         top: 200px;
         z-index: 1;
-        border-radius: 0 0 0 18px;
+        /* border-radius: 0 0 0 18px; */
       }
 
       .green {
@@ -54,7 +55,7 @@
         top: 200px;
         left: 200px;
         z-index: 1;
-        border-radius: 0 0 18px 0;
+        /* border-radius: 0 0 18px 0; */
       }
 
       .gray {
