@@ -1,15 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  top: 0;
-  overflow: hidden;
+  background-color: bisque;
 }
 
 .container {
-  width: 100%;
-  height: 100%;
   background-color: bisque;
 }
 .cicle {
@@ -20,10 +21,10 @@ body {
   position: absolute;
 
   animation-name: damon;
-  animation-duration: 3s;
-  animation-delay: 5s;
+  animation-duration: 5s;
+  animation-delay: 1s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
 }
 
 @keyframes damon {
@@ -33,18 +34,18 @@ body {
   }
 
   25% {
+    left: calc(100% - 200px); /* Adjust for circle size */
     top: 0;
-    left: 88vw;
   }
 
   50% {
-    left: 88%;
-    top: 79%;
+    left: calc(100% - 200px); /* Adjust for circle size */
+    top: calc(100% - 200px); /* Adjust for circle size */
   }
 
   75% {
     left: 0;
-    top: 79%;
+    top: calc(100% - 200px); /* Adjust for circle size */
   }
 
   100% {
