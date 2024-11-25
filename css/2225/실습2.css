@@ -1,5 +1,5 @@
 * {
-  width: 100wh;
+  width: 100vw;
   height: 100vh;
 }
 .container {
@@ -21,6 +21,7 @@
 .div3:hover {
   transform: skew(0deg, 0deg);
   transition: transform 1s;
+  z-index: 999;
 }
 
 .img1 {
