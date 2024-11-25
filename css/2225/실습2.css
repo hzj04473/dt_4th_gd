@@ -1,7 +1,19 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   width: 100vw;
   height: 100vh;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .container {
   display: flex;
   justify-content: center;
@@ -14,24 +26,23 @@
   width: 400px;
   height: 200px;
   transform: skew(3deg, 35deg);
+  transition: transform 1s;
+}
+
+.div1,
+.div2 {
+  margin-right: -140px;
 }
 
 .div1:hover,
 .div2:hover,
 .div3:hover {
   transform: skew(0deg, 0deg);
-  transition: transform 1s;
   z-index: 999;
 }
 
-.img1 {
-  width: 400px;
-  height: 200px;
-}
-.img2 {
-  width: 400px;
-  height: 200px;
-}
+.img1,
+.img2,
 .img3 {
   width: 400px;
   height: 200px;
