@@ -17,14 +17,4 @@
 }
 
 @media screen and (max-width: 768px) {
-  .mMenu {
-    list-style-type: none;
-    color: #fff;
-    width: 2em;
-    height: 2em;
-    display: flex;
-  }
-  .menu {
-    display: none;
-  }
 }
