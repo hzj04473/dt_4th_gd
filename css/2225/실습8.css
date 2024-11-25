@@ -1,20 +1,76 @@
-.header {
-  background-color: black;
-  height: 2em;
-}
-.menu {
-  height: 2em;
-  list-style-type: none;
-  color: #fff;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.mMenu {
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: burlywood;
+  padding: 12px 12px;
+  font-size: 20px;
+}
+
+.navbar_menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.navbar_menu li {
+  list-style: none;
+  padding: 18px;
+  color: #fff;
+}
+
+.navbar_menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar_menu {
+    display: none;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .menu-toggle:checked + .hamburger + .navbar_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+/*
+버그 
+모바일에서 메뉴를 펼친 후 
+PC 화면으로 갔다가 모바일로 오면 메뉴가 펼쳐진 상태로 유지
+*/
