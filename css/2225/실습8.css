@@ -1,0 +1,30 @@
+.header {
+  background-color: black;
+  height: 2em;
+}
+.menu {
+  height: 2em;
+  list-style-type: none;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mMenu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mMenu {
+    list-style-type: none;
+    color: #fff;
+    width: 2em;
+    height: 2em;
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+}
