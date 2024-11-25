@@ -1,0 +1,36 @@
+.div {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.div1:hover {
+  background-color: hotpink;
+  transform: translateX(50px) scaleX(2);
+  transition-property: all;
+  transition-duration: 2s;
+}
+
+.div2:hover {
+  position: relative;
+  background-color: hotpink;
+  transform: translate(30px) skew(-30deg, 0);
+  transition-property: all;
+  transition-duration: 2s;
+}
+
+.div3:hover {
+  border-radius: 80px;
+  transform: translate(300%, 0);
+  transition-property: all;
+  transition-duration: 2s;
+  background-color: red;
+}
+
+.div4:hover {
+  transform: rotateY(180deg) rotateY(180deg) scale(2);
+  transition: transform 2s;
+  transition-property: all;
+  background-color: yellow;
+}
