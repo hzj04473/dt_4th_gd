@@ -23,3 +23,26 @@ img:hover {
   transition: transform 1s;
   /* 이미지가 변환 할 때 1초 동안 부드럽게 변환됨. */
 }
+
+/* transition 보충 설명 */
+/* 
+  * transition: 1s;
+  - 간단히 모든 속성에 트랜지션을 적용하고 싶을 때 사용.
+  - 변경 대상 속성이 많거나, 다양할 경우 적합.
+
+  * transition: transform 1s;
+  - 성능 최적화를 위해 특정 속성에만 트랜지션을 적용하고 싶을 때 사용.
+  - 필요 없는 속성에는 트랜지션 효과가 적용되지 않도록 세밀하게 조정.
+*/
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #6495ed;
+  /* # transition 한 번에 쓰는 방법 */
+  transition: width 2s ease, background-color 4s linear;
+}
+
+div:hover {
+  width: 200px;
+  background-color: red;
+}
