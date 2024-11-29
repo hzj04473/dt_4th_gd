@@ -52,7 +52,7 @@ const sayHello2 = function hello() {
 // hello(); // Uncaught ReferenceError: hello is not defined
 
 const helloWorld3 = function () {
-  // return 생략버장
+  // return 생략버전
   console.log('Hello World! 3');
 };
 
@@ -62,7 +62,7 @@ helloWorld3();
 // 함수는 "여러번" 호출이 가능하다.
 
 const helloWorld4 = function () {
-  // return 생략버장
+  // return 생략버전
   return 'Hello World! 4';
 };
 
@@ -128,7 +128,7 @@ console.log(triangle2(3, 4));
 // - "함수 선언문"이 호이스팅
 // - 변수에서는 "var"
 
-console.log(`hoisting`);
+console.log(`---- hoisting ----`);
 sayHello5();
 function sayHello5() {
   console.log('hoisting hello');
