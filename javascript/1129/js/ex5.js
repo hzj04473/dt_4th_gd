@@ -21,3 +21,4 @@ function isAge() {
 
 const result = isAge();
 console.log(result);
+// document.write(result);
