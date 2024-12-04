@@ -4,9 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <script src="./js/1.object.js"></script> -->
+    <!-- <script src="./js/2.implicit.js"></script> -->
+    <!-- <script src="./js/3.dom.js" defer></script> -->
+    <script src="./js/4.dom.js" defer></script>
+    <!-- defer js 파일이 페이지 로딩과 동시에 비동기적으로 실핼되도록 지시하는 역할 -->
+    <!-- defer 속성을 사용하면, 스크립트가 페이지의 **HTML 파싱이 끝날떄 까지 실행되지 않음. 파싱이 끝난 후 비로소 실행됨-->
+    <!-- * 비동시 적 : 스크립트가 로드되는 동안 다른 작업들이 동시에 진행 될수 있다는 의미 -->
+    <!-- ** HTML 파싱 : 웹브라우저가 HTML 문서를 읽고, 이를 DOM 트리로 변환하는 과정-->
+
+    <!-- 
+    - 3.dom.js - 
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        border: 1px solid black;
+        text-align: center;
+        margin: 10px;
+        line-height: 100px;
+      }
+
+      .pink {
+        background-color: pink;
+      }
+
+      #green {
+        background-color: green;
+      }
+      #red {
+        background-color: red;
+      }
+    </style> -->
+
+    <style>
+      img {
+        width: 150px;
+      }
+      .add-h1 {
+        color: yellowgreen;
+        text-align: center;
+        font-size: 30px;
+        background-color: #000;
+      }
+
+      .p-2 {
+        background-color: yellow;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .p-3 {
+        background-color: skyblue;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <!-- <script src="./js/1.object.js"></script> -->
-    <script src="./js/2.implicit.js"></script>
+    <!-- 
+    - 3.dom.js - 
+    <h1>DOM 연습</h1>
+    <div class="pink">1</div>
+    <div class="pink">2</div>
+    <div class="pink">3</div>
+    <div class="pink">4</div>
+    <div class="others" id="green"></div>
+    <div class="others" id="red"></div>
+
+    <input type="text" name="id" />
+    <input type="button" name="id" value="click" /> -->
+
+    <h1>JS 요소 다루기</h1>
+    <div style="color: red" id="div1">
+      How do yo do <span style="display: none">today?</span>
+    </div>
+
+    <a href="https://www.naver.com" id="naver">naver</a>
+    <img
+      src="../../css/1127/bootstrap/image/6954591_animals_bird_furniture and household_hunter_nature_icon.png"
+      alt="owl"
+      id="owl"
+    />
+
+    <img
+      src="../../css/1127/bootstrap/image/Owl_image.png"
+      alt="owl"
+      id="owl"
+    />
+
+    <ul id="friends">
+      <li>짱구</li>
+      <li id="hoon">훈이</li>
+      <li>철수</li>
+      <li>맹구</li>
+      <li>유리</li>
+    </ul>
+    <hr />
+    <div class="container"></div>
   </body>
 </html>
