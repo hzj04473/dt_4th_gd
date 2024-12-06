@@ -33,10 +33,10 @@ const naver = document.getElementById('naver');
 naver.setAttribute('href', 'https://www.google.com');
 
 const owl = document.getElementById('owl');
-owl.setAttribute('src', '../../css/1127/bootstrap/image/Owl_image.png');
+owl.setAttribute('src', '../02-css/image/Owl_image.png');
 
 // getAttribute(속성명) => 속성 값 '얻기'
-console.log(document.getElementById('owl').getAttribute('src')); // ../../css/1127/bootstrap/image/Owl_image.png
+console.log(document.getElementById('owl').getAttribute('src')); // ../02-css/image/Owl_image.png
 
 // +) 참고1. 속성 접근 (.) 연산자로도 가능.
 console.log(document.getElementById('owl').id); // owl
@@ -79,32 +79,40 @@ console.log('-------------------------');
 
 // #4. 요소 찾기. (다른 노드에 접근)
 // 계층 구조 (형제, 자식, 부모, 조상, 자손)
-
 const friends = document.querySelector('#friends');
 const hoon = document.querySelector('#hoon');
 
-// 1. 자식요소
-console.log(friends.children); // 유사배열,
-console.log(friends.children[0]);
+// 1. 자식 요소 (자손)
+console.log(friends.children); // 유사 배열, 자식 모두 선택 // [li, li#hoon, li, li, li, hoon: li#hoon]
+console.log(friends.children[0]); // 인덱스 접근.
 
 // 2. 부모 요소
 console.log(hoon.parentNode);
-console.log(hoon.parentNode.parentNode);
+console.log(hoon.parentNode.parentNode); // body // 조상
 
-//3. 형제요소
-console.log(hoon.previousElementSibling);
-console.log(hoon.nextElementSibling);
-console.log(hoon.nextElementSibling.nextElementSibling);
+// 3. 형제 요소
+console.log(hoon.previousElementSibling); // 이전
+console.log(hoon.nextElementSibling); // 다음
+console.log(hoon.nextElementSibling.nextElementSibling); // 맹구 // 형형제
 
+console.log('-------------------------');
+
+// #5. 새로운 요소 생성
 const container = document.querySelector('.container');
-console.log(container);
-const p = document.createElement('p');
-console.log(p);
+const p = document.createElement('p'); // 요소 생성 <p></p>
 
-p.innerText = '새로 추가된 p 요소 입니다.';
+console.log(p); // js로 <p></p> 태그를 만듦.
+
+p.innerText = '새로 추가된 p 요소 입니다~!';
 p.style.fontWeight = 700;
 p.style.backgroundColor = 'skyblue';
+
 console.log(p);
+// <p style="font-weight: 700; background-color: skyblue;">새로 추가된 p 요소 입니다~!</p>
+
+// #6. 요소 추가.
+// x.append(y): x 요소의 맨 마지막 자식으로 y 요소가 추가. - 여러개 가능
+// x.appendChild(y): x 요소의 맨 마지막 자식으로 y 요소가 추가. - 한개 만 가능
 div1.appendChild(p);
 
 const p2 = document.createElement('p');
@@ -112,17 +120,18 @@ const p3 = document.createElement('p');
 
 p2.innerHTML = 'p2';
 p3.innerHTML = 'p3';
-
 // console.log(p2);
-// console.log(p3);
+
 p2.classList.add('p-2');
 p3.classList.add('p-3');
 
-container.append(p2, p3);
+container.append(p2, p3); // 여러개 추가 가능!
 
+// x.prepend(y): x요소의 맨 처음 자식으로 y요소가 추가
+// x.before(y): x요소의 바로 이전 형제 요소로 y요소가 추가
+// x.after(y): x요소의 바로 다음 형제 요소로 y요소가 추가
 const li1 = document.createElement('li');
-li1.textContent = '횐둥이';
-
+li1.textContent = '흰둥이';
 friends.prepend(li1);
 
 const li0 = document.createElement('li');
