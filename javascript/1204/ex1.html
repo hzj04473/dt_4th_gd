@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tasteRed {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span>민트 초코는 <span class="tasteChk">맛있다. >_< </span></span>
+    <script defer>
+      let tasteChk = document.querySelector('.tasteChk');
+      console.log(tasteChk);
+      tasteChk.textContent = '맛없다__;;';
+      // tasteChk.style.color = 'red';
+      tasteChk.classList.add('tasteRed');
+    </script>
+  </body>
+</html>
