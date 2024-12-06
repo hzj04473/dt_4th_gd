@@ -130,13 +130,33 @@ container.append(p2, p3); // 여러개 추가 가능!
 // x.prepend(y): x요소의 맨 처음 자식으로 y요소가 추가
 // x.before(y): x요소의 바로 이전 형제 요소로 y요소가 추가
 // x.after(y): x요소의 바로 다음 형제 요소로 y요소가 추가
-const li1 = document.createElement('li');
-li1.textContent = '흰둥이';
-friends.prepend(li1);
+// const li1 = document.createElement('li');
+// li1.textContent = '흰둥이';
+// friends.prepend(li1);
 
-const li0 = document.createElement('li');
-li0.innerHTML = '<b>짱구 친구들을 소개 합니다.</b>';
-friends.prepend(li0);
+// const li0 = document.createElement('li');
+// li0.innerHTML = '<b>짱구 친구들을 소개 합니다.</b>';
+// friends.prepend(li0);
 
-hoon.before(li1);
-hoon.after(li1);
+// hoon.before(li1);
+// hoon.after(li1);
+
+// #7. 요소 삭제
+// x.remove() : x 요소 자체를 삭제
+// x.removeChild(y) : x의 자식 요소인 y가 삭제
+// 둥 다 메모리에서 즉시 삭제되지 않으니, 참조를 유지하면 재활용이 가능하다.
+
+const firstLi = document.querySelector('li');
+console.log(firstLi); // 짱구
+
+const ul = firstLi.parentNode;
+console.log('ul >>>>', ul);
+
+// ul.remove(); // ul 태그 자체가 삭제됨
+
+// 참조를 유지하면서 재활용한 방법!
+firstLi.remove(); // 짱구만 사라짐
+div1.appendChild(firstLi); // JS 특성상 메모리를 바로 삭제하지 않음
+
+// ul.removeChild(firstLi); // 짱구가 사라짐
+// div1.appendChild(firstLi); // 짱구를 잘라낸 것을 div1에 붙혔음
