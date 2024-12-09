@@ -39,7 +39,7 @@ function changeHtmlJquery() {
 
 // 요소 추가하기
 // append()
-function appendJS() {
+function appendJs() {
   // Quiz
   // 1. colors 클래스 갖는 요소 선택하고
   const colors = document.querySelector('.colors');
@@ -55,20 +55,20 @@ function appendJquery() {
   $('.colors').append('<li>마지막 자식으로 추가된 jquery</li>'); // 태그도 적용됨!
 }
 
-// prepend()
-// function prependJS() {
-//     const colors2 = document.querySelector('.colors');
-//     const li = document.createElement('li');
-//     li.innerText = '첫 자식으로 추가된 js';
-//     colors2.prepend(li);
-// }
+// prepend();
+function prependJs() {
+  const colors2 = document.querySelector('.colors');
+  const li = document.createElement('li');
+  li.innerText = '첫 자식으로 추가된 js';
+  colors2.prepend(li);
+}
 
-// function prependJquery() {
-//     $('.colors').prepend('<li>첫 자식으로 추가된 jquery</li>');
-// }
+function prependJquery() {
+  $('.colors').prepend('<li>첫 자식으로 추가된 jquery</li>');
+}
 
 // before()
-function beforeJS() {
+function beforeJs() {
   // 1. green 클래스를 갖는 요소 선택하고
   const green = document.querySelector('.green');
   // 2. li 태그 요소 생성한 후
@@ -89,7 +89,7 @@ function beforeJquery() {
 }
 
 // after()
-function afterJS() {
+function afterJs() {
   const green = document.querySelector('.green');
   const li = document.createElement('li');
   li.innerText = '다음 형제요소로 추가(js)';
@@ -99,10 +99,12 @@ function afterJS() {
 function afterJquery() {
   $('.green').after('<li>다음 형제요소로 추가(jquery)</li>');
 }
-
-function removeJs() {
+// 요소 삭제하기
+// remove()
+function removeJS() {
+  // Quiz
+  // li2 아이디 갖는 요소 선택하여 그 요소 삭제.
   const li2 = document.querySelector('#li2');
-  console.log(li2);
   li2.remove();
 }
 
@@ -110,70 +112,75 @@ function removeJquery() {
   $('#li2').remove();
 }
 
-function emptyJs() {
+// empty()
+function emptyJS() {
+  // 참고! js에서는 empty 메서드가 없습니다.
+  // 1. ul 태그이자 num 클래스를 갖는 요소를 선택 후
   const nums = document.querySelector('ul.nums');
-  nums.innerText = '';
+  // 2. 해당 요소의 HTML을 빈 문자열로 설정
+  nums.innerHTML = '';
 }
 
 function emptyJquery() {
-  $('.nums').empty();
+  $('ul.nums').empty();
 }
 
+// 요소 탐색하기
 function findParent() {
-  // console.log('11');
+  // child2 클래스 갖는 요소의 부모 요소 (console로 찍기)
   console.log(document.querySelector('.child2').parentNode); // 모든 부모 노드 가능
   console.log(document.querySelector('.child2').parentElement); // 부모 "요소"인 것만 가능
-  console.log(document.querySelector('html').parentNode); // 부모가 document면 @애쳐ㅡ둣
-  console.log(document.querySelector('html').parentElement); // 부모가 document null
+  console.log(document.querySelector('html').parentNode); // 부모가 document면 #document 출력
+  console.log(document.querySelector('html').parentElement); // 부모가 document면 null 값 출력
 
   console.log($('.child2').parent());
 }
 
 function findParents() {
-  // js 없습니다!. 채스
+  // js 없습니다!. 패스!
+  // jquery 형식
   console.log($('.child2').parents());
 }
 
 function findNext() {
+  // child2 클래스 갖는 요소의 다음 형제 요소 (console)
   console.log(document.querySelector('.child2').nextElementSibling);
-
   console.log($('.child2').next());
 }
 
 function findPrev() {
+  // Qz) child2 클래스 갖는 요소의 이전 형제 요소
   console.log(document.querySelector('.child2').previousElementSibling);
-
   console.log($('.child2').prev());
 }
 
 function findChildren() {
+  // Qz) parent 클래스 갖는 요소의 자식 요소
   console.log(document.querySelector('.parent').children);
-
   console.log($('.parent').children());
 }
 
+// 클래스 조작하기
 function addClass() {
-  // const hi = document.querySelector('#hi');
-  // hi.classList.add('fs-50');
-
+  // Qz) hi 아이디 갖는 요소 선택하여 'fs-50' 클래스 추가
+  // document.querySelector('#hi').classList.add('fs-50');
   $('#hi').addClass('fs-50');
-  // console.log($('#hi'));
 }
-function removeClass() {
-  // const hi = document.querySelector('#hi');
-  // hi.classList.remove('fs-50');
 
+function removeClass() {
+  // Qz) hi 아이디 갖는 요소 선택해서 'fs-50' 클래스 삭제
+  // document.querySelector('#hi').classList.remove('fs-50');
   $('#hi').removeClass('fs-50');
 }
-function hasClass() {
-  // const hi = document.querySelector('#hi');
-  // console.log(hi.classList.contains('fs-50'));
 
+function hasClass() {
+  // Qz) hi 아이디 갖는 요소 선택해서 'fs-50' 클래스 포함 여부 확인. (true / false)
+  console.log(document.querySelector('#hi').classList.contains('fs-50'));
   console.log($('#hi').hasClass('fs-50'));
 }
-function toggleClass() {
-  // const hi = document.querySelector('#hi');
-  // hi.classList.toggle('bg-pink');
 
+function toggleClass() {
+  // Qz) hi 아이디 갖는 요소 선택해서 'bg-pink' 클래스 토글
+  // document.querySelector('#hi').classList.toggle('bg-pink');
   $('#hi').toggleClass('bg-pink');
 }
