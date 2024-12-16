@@ -122,3 +122,6 @@ package-lock.json
 
 # DS_store 제외
 .DS_store
+
+# .vscode-test
+.vscode
